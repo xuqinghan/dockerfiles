@@ -1,15 +1,11 @@
-#ubuntu-with-python36
+FROM ubuntu-with-python
+LABEL author="lazyman"
 
-#xuqinghan @ 20170903
+#代码复制过来后的路径
+RUN mkdir /code
+WORKDIR /code
 
-#ubuntu16.04+python36
-
-
-FROM ubuntu-with-python36
-
-#python3.6  http://ubuntuhandbook.org/index.php/2017/07/install-python-3-6-1-in-ubuntu-16-04-lts/
-#RUN cp ./sources.list /etc/apt/sources.list
-#RUN pip install flask
-
-#RUN rm /usr/bin/python3
-#RUN ln -s python3.5 /usr/bin/python3
+#安装需要的python库
+RUN pip3 install flask
+RUN pip3 install flask-sqlalchemy
+RUN pip3 install flask_restful
