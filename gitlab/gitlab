@@ -1,0 +1,22 @@
+docker pull gitlab/gitlab-ce:latest
+
+gedit /etc/docker/daemon.json
+
+{
+  "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn"]
+}
+
+
+
+https://dev.aliyun.com/search.html
+
+
+docker pull registry.cn-hangzhou.aliyuncs.com/lab99/gitlab-ce-zh
+docker pull registry.cn-hangzhou.aliyuncs.com/kinming/mysql_debian
+
+docker pull docker.mirrors.ustc.edu.cn/gitlab/gitlab-ce:latest
+
+docker pull registry.cn-hangzhou.aliyuncs.com/kinming/mysql_debian
+
+用户名: `root`
+密码: `5iveL!fe`
