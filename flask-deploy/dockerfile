@@ -6,5 +6,6 @@ RUN mkdir /code
 WORKDIR /code
 COPY requirements.txt /code/requirements.txt
 RUN pip3 install -r requirements.txt
+RUN pip3 install gunicorn
 ENV PYTHONIOENCODING=utf-8
-RUN "/bin/bash"
+CMD ["/bin/bash"]

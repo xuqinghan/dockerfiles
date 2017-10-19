@@ -8,7 +8,8 @@ services:
     build: ./dockerfile
     image: flask-deploy:latest
     volumes:
-      - /home/flask_test:/code
+    #  - /home/xuqinghan/dev/flask_test:/code
+      - /home/xuqinghan/dev/flaskbb:/code
     ports:
       - "5000:5000"
-    #command: python3 main.py
+    #command: gunicorn --workers=1 app:app -b 0.0.0.0:5000
