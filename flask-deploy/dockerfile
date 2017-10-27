@@ -6,8 +6,9 @@ RUN apt update
 RUN apt install -y nginx gunicorn supervisor
 
 #代码复制过来后的路径
-RUN mkdir /code
+RUN mkdir -p /code
 WORKDIR /code
+COPY app /deploy/app
 COPY requirements.txt /code/requirements.txt
 RUN pip3 install -r requirements.txt
 ENV PYTHONIOENCODING=utf-8
